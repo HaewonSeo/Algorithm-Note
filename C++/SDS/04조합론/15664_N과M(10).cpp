@@ -15,11 +15,16 @@ void dfs(int k) {
 	}
 
 	int prev = -1;
+	int prevAns;
 	for (int i = 0 ; i < N ; i++) {
 		if (used[i]) continue;
 		//printf("[k=%d] i=%d    ans[%d]=%d   A[%d]=%d\n", k, i, k, ans[k], i, A[i]);
 		//printf("[k=%d] i=%d    prev=%d   A[%d]=%d\n", k, i, prev, i, A[i]);
-		if (prev != A[i]) {
+		if (k == 0)
+			prevAns = -1;
+		else
+			prevAns = ans[k-1];
+		if (prev != A[i] && prevAns <= A[i]) {
 			used[i] = true;
 			prev = A[i];
 			ans[k] = A[i];
