@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 
-bool iscomposite[1001];
+bool iscomposite[1000001];
 int n, a[100];
 vector<int> prime;
-int primeCount[100][168];  // 1000 이하 소수가 168개 존재
-int totalCount[168];  // 전체 숫자에서 소수가 나타난 횟수
-int gcdCount[168];    // gcd를 이루는 소수의 횟수
+int primeCount[100][80000];  // 1000000이하 소수가 7xxxx 존재
+int totalCount[80000];  // 전체 숫자에서 소수가 나타난 횟수
+int gcdCount[80000];    // gcd를 이루는 소수의 횟수
 
 int main() {
 	scanf("%d", &n);
@@ -18,10 +18,12 @@ int main() {
 	// 1000까지의 수 중 소수를 구함
 	// 어떤 수 N은 N의 제곱근 이상의 소수로 나누어지지 않는다.
 	// 따라서 1000까지의 소수를 찾는다.
-	for (int i = 2; i <= 1000; i++) {
+	// 그러나... 1000000까지의 수 중 자기 자신이 소수인 수가 존재하므로...
+	// 중간이 이 소수의 개수를 계산하기 번거로우므로 여기서 1000000까지의 소수를 구한다.
+	for (int i = 2; i <= 1000000; i++) {
 		if (iscomposite[i]) continue;
 		prime.push_back(i);
-		for (int j = i * i; j <= 1000; j += i) {
+		for (int j = i + i; j <= 1000000; j += i) {
 			iscomposite[j] = true;
 		}
 	}
