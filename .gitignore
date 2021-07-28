@@ -1,2 +1,4 @@
 *.exe
 .vscode/
+*/Samsung/사전문제/*
+*.txt
