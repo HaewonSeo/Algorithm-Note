@@ -62,6 +62,7 @@ int main() {
 			}
 		}
 		// [교환횟수가 numLen-1만큼만 있으면 numLen-1번으로 최대값 구할 수 있다.]
+		// -> 완벽히 이해되지 않음..!
 		int numLen = MAXPOS - startPos + 1;
 		if (C > numLen-1)
 			C = numLen-1;
