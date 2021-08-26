@@ -1,4 +1,5 @@
 *.exe
 .vscode/
-*/Samsung/사전문제/*
+*/Samsung/00사전문제/*
 *.txt
+Debug/
