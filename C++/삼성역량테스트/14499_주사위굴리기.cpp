@@ -11,7 +11,7 @@ const int dc[5] = {0, 1, -1, 0, 0};
 
 int N, M, x, y, K;
 int map[20][20];
-int order[1000];
+int order[1000]; // order를 굳이 배열로 만들지 않고, 입력받자마자 주사위 굴려도 됌
 int dice[7]; // 1~6(전개도 참고), 1:윗면, 3:동, 6:바닥면
 pii cur;
 
