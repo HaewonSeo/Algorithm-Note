@@ -60,3 +60,6 @@ int main() {
 
 	printf("%d %d", bestScore, minTry);
 }
+
+
+// 나중에 map<>를 이용하여 소수를 구하는 범위를 줄여 시간 단축해보기!
