@@ -5,6 +5,7 @@
 *.txt
 Debug/
 *.dSYM
+Private/
 
 #### C++ ####
 
